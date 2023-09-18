@@ -40,6 +40,12 @@ int main()
     double b = 214.42;
     int id = (int)b;
     std::cout << id << std::endl; // 214
+    
+    int sefa10 = 214;
+    double za = sefa10 - 0.2;
+
+    std::cout << "za:"<<za << std::endl;
+    
 
     std::cout << std::endl;
     //2: veti türünü fonk. adı gibi kullanıp dönüştürme
