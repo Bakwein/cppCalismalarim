@@ -26,11 +26,17 @@ int main()
     int s = 21;
     int t = 42;
 
+    int d1= 53;
+
+    double d = 42.4;
+
     add(s,t);
     std::cout << s << "+" << t << "= " << add(s,t) << std::endl;
     float f1 = 321.23;
     float f2 = 12.42;
     std::cout << f1 << "+" << f2 << "= " << add(f1,f2) << std::endl;
+
+    std::cout << add(s,d1) << std::endl;
 
     std::cout << std::endl;
     std::cout << max(s,t) << std::endl;
