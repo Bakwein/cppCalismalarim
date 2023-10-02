@@ -15,20 +15,15 @@ Methodlar;
 .array::cend()	Dizinin son elemanının bir sonrakine bir const referans döndürür.
 .array::size()	Dizideki eleman sayısını döndürür.
 .array::maxsize() size ile ayni değeri return eder
-array::resize()	Dizi boyutunu değiştirir.
-array::fill()	Diziyi bir değerle doldurur.
+.array::fill()	Diziyi bir değerle doldurur.
 .array::front()	Dizinin ilk elemanını referans olarak döndürür.
 .array::back()	Dizinin son elemanını referans olarak döndürür.
-array::at()	Dizideki bir elemana bir referans döndürür.
+.array::at()	Dizideki bir elemana bir referans döndürür.
 .array::operator[]()	Dizideki bir elemana bir referans döndürür.
-array::push_back()	Diziye bir eleman ekler.
-array::pop_back()	Diziden bir eleman siler.
-array::insert()	Diziye bir eleman ekler.
-array::erase()	Diziden bir eleman siler.
 .array::swap()	İki diziyi yer değiştirir.
 .array::sort()	Diziyi sıralar.
-array::binary_search()	Dizide bir değer arar.
-data()-> arr.data() : array'ın ilk elemanını gösteren pointerı
+.array::binary_search()	Dizide bir değer arar.
+.data()-> arr.data() : array'ın ilk elemanını gösteren pointerı
 */
 
 int main()
@@ -64,7 +59,7 @@ int main()
 
     }
     std::cout << std::endl;
-    {//for-auto
+    {//for-auto, data()
         std::array<int,5> arr = {1,2,3,4,5};
         /*
         for(auto x:arr)
@@ -72,6 +67,12 @@ int main()
             std::cout << x << " ";
         }
         */
+        std::cout << "arr.data()" << std::endl;
+        int *p = arr.data();
+        for(int i = 0;i < arr.size(); i++)
+        {
+            std::cout << p[i] << " ";
+        }
     }
     std::cout << "\n\n";
 
@@ -111,23 +112,36 @@ int main()
         }
     }
     std::cout << "\n\n";
-    {//empty(),fill()
+    {//empty(),fill(),resize()
         std::array<int,3> x;
         std::array<int,0> a1;
         std::cout << "x.empty(): " << x.empty() << std::endl;
-        std::cout << "a1.empty(): " << a1.empty() << std::endl << std::endl;
+        std::cout << "a1.empty(): " << a1.empty() << std::endl;
         /*for(auto a: x)
         {
             std::cout << a << " ";
         }
-        */
-        std::cout << std::endl; 
+        */ 
         x.fill(23);
-        
+        a1.fill(43);
+        std::cout << "after fill:" << std::endl;
+        std::cout << "x->";
         for(int a =0; a < x.size();a++)
         {
             std::cout << x[a] << " ";
         }
+        std::cout << "\n";
+        std::cout << "a1->";
+        for(int a =0; a < a1.size();a++)
+        {
+            std::cout << a1[a] << " ";
+        }
+        std::cout << "\n";
+        std::cout << "x.empty(): " << x.empty() << std::endl;
+        std::cout << "a1.empty(): " << a1.empty() << std::endl;
+        
+        
+        
     }
 
     {//iterators - begin(),end()
@@ -157,6 +171,14 @@ int main()
             std::cout << *i1 << " ";
         }
 
+    }
+
+    {//binary_search
+    std::cout << "\n\n";
+    std::array<int,6> a1 = {1,2,3,4,5,6};
+    std::cout << std::binary_search(a1.begin(),a1.end(),3) << std::endl;
+    std::cout << std::binary_search(a1.begin(),a1.end(),30) << std::endl;
+        
     }
 
 
