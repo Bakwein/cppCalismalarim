@@ -1,1 +1,6 @@
 https://www.geeksforgeeks.org/containers-cpp-stl/?ref=lbp
+
+
+array .'siz methodlari bitir vektorlere geç
+videolardan devam et
+https://www.youtube.com/watch?v=bADtYBxrM8I&list=PLk6CEY9XxSIA-xo3HRYC3M0Aitzdut7AA&index=3
