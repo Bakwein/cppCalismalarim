@@ -25,8 +25,8 @@ Boyut ve Boşluk Kontrolü:
 .empty(): set boşsa true, değilse false döndürür.
 Arama ve Erişim:
 
-find(): Belirli bir öğeyi bulur ve iteratorunu döndürür. Eğer öğe bulunamazsa end() iteratorünü döndürür.
-count(): Belirli bir öğenin set içinde kaç kez bulunduğunu sayar (genellikle 0 veya 1 olur).
+.find(): Belirli bir öğeyi bulur ve iteratorunu döndürür. Eğer öğe bulunamazsa end() iteratorünü döndürür.
+.count(): Belirli bir öğenin set içinde kaç kez bulunduğunu sayar (genellikle 0 veya 1 olur).
 Sıralama İşlemleri:
 
 .begin(): set'in başlangıç iterator'ünü döndürür.
@@ -35,9 +35,14 @@ rbegin(): Tersten başlangıç iterator'ünü döndürür.
 rend(): Tersten son iterator'ünü döndürür.
 Diğer:
 
-lower_bound(): Belirli bir anahtar için alt sınıra işaret eden bir iterator döndürür.
-upper_bound(): Belirli bir anahtar için üst sınıra işaret eden bir iterator döndürür.
-equal_range(): Belirli bir anahtarı içeren öğelerin aralığını döndürür (bir pair içinde first ve second iterator'ları).
+.lower_bound(): Belirli bir anahtar için alt sınıra işaret eden bir iterator döndürür.
+.upper_bound(): Belirli bir anahtar için üst sınıra işaret eden bir iterator döndürür.
+!*/
+/*
+std::set::lower_bound() and std::set::upper_bound() are member functions of the std::set container that return iterators to elements in the set. The lower_bound() function returns an iterator to the first element in the set that is not less than the given value, while the upper_bound() function returns an iterator to the first element in the set that is greater than the given value.
+*/
+/*
+equal_range(): Belirli bir anahtarı içeren öğelerin aralığını döndürür (bir pair içinde first ve second iterator'ları). // auto ile yapılıyor
 
 
 */
@@ -106,10 +111,75 @@ int main()
          std::cout << Set.size() <<std::endl;
         Set.erase(Set.begin(),Set.end());
         std::cout << Set.size() <<std::endl;
-
-
+        std::cout << "\n";
         
+
+    }   
+    {
+        std::set<char> Set;
+        Set.insert('A');
+        Set.insert('b');
+        Set.insert('k');
+        Set.insert('b');
+        Set.insert('m');
+        Set.insert('K');
+        Set.insert('l');
+        Set.insert('k');
+        Set.insert('a');
+        Set.insert('A');
+        std::set<char>::iterator it= Set.find('b');
+
+        int count_b = Set.count('b');
+        std::cout << "count_b: " << count_b << std::endl;
+        int count_S = Set.count('S');
+        std::cout << "count_S: " << count_S << std::endl;
+
+    }   
+    std::cout << "\n";
+    {
+        std::set<int> mySet;
+        mySet.insert(1);
+        mySet.insert(2);
+        mySet.insert(3);
+        mySet.insert(4);
+        mySet.insert(5);
+
+    // Set'in sondan başa doğru ilk elemanını işaretle.
+    std::set<int>::reverse_iterator rit = mySet.rbegin();
+
+    // Set'in tüm elemanlarını ters sırada yazdır.
+    while (rit != mySet.rend()) {
+        std::cout << *rit << " ";
+        rit++;
     }
 
+    std::cout << std::endl;
+    }
+    std::cout << "\n";
+    {
+        std::set<int> mySet;
+        mySet.insert(1);
+        mySet.insert(2);
+        mySet.insert(3);
+        mySet.insert(4);
+        mySet.insert(5);
 
+        std::set<int>::iterator i = mySet.lower_bound(3);
+        for(;i!=mySet.end();i++)
+        {
+            std::cout << *i << " ";
+        }
+        std::cout << "\n";
+
+        std::set<int>::iterator i1 = mySet.upper_bound(3);
+        for(;i1!=mySet.end();i1++)
+        {
+            std::cout << *i1 << " ";
+        }
+        std::cout << "\n";
+
+    }
 }
+
+
+
