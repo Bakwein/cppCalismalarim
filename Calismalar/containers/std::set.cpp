@@ -179,6 +179,36 @@ int main()
         std::cout << "\n";
 
     }
+    std::cout << "\n";
+    {
+        std::set<int,std::greater<int> > mySet;
+        mySet.insert(1);
+        mySet.insert(2);
+        mySet.insert(3);
+        mySet.insert(4);
+        mySet.insert(5);
+
+        for(std::set<int>::iterator i = mySet.begin();i!=mySet.end();i++)
+        {
+            std::cout << *i << " ";
+        }
+        std::cout << "\n";
+        
+        std::set<int,std::less<int> > mySet1;
+        mySet1.insert(1);
+        mySet1.insert(2);
+        mySet1.insert(3);
+        mySet1.insert(4);
+        mySet1.insert(5);
+        for(std::set<int>::iterator i = mySet1.begin();i!=mySet1.end();i++)
+        {
+            std::cout << *i << " ";
+        }
+        
+
+
+
+    }
 }
 
 

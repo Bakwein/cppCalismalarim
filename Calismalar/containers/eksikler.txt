@@ -4,9 +4,9 @@ https://www.geeksforgeeks.org/containers-cpp-stl/?ref=lbp
 
 https://www.youtube.com/watch?v=bADtYBxrM8I&list=PLk6CEY9XxSIA-xo3HRYC3M0Aitzdut7AA&index=3
 
-vector capacity size örnekten tekrar et, arastir
+vector capacity size örnekten tekrar et(bu belki??)
 
-set video 6.31 + set geeksforgeeks
+map geeks + video .cpp dosyasına devam
 
-erase'de hata aldım yorum satirina bak
+lower_bound upper_bound kafam karisti tekrar lazim
 
