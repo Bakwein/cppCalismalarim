@@ -1,12 +1,10 @@
 https://www.geeksforgeeks.org/containers-cpp-stl/?ref=lbp
 
+bazı durumlarda iteratorlerde neden < kullanamıyoruz
+iterator calisma mantigi
 
 
 https://www.youtube.com/watch?v=bADtYBxrM8I&list=PLk6CEY9XxSIA-xo3HRYC3M0Aitzdut7AA&index=3
 
-vector capacity size örnekten tekrar et(bu belki??)
 
-map geeks + video .cpp dosyasına devam
-
-lower_bound upper_bound kafam karisti tekrar lazim
 
