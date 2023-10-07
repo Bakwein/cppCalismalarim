@@ -58,7 +58,7 @@ int main()
             std::cout << pq2.top() << " ";
             pq2.pop();
         }
-        std::cout << "\æçn";
+        std::cout << "\n";
 
 
     }
